@@ -4,6 +4,32 @@ O **AC680PRO DSP Controller** e um sistema de controle para processadores de aud
 
 O projeto combina firmware ESP-IDF, export SigmaStudio e frontend React/Electron em uma solucao unica para controle, calibracao e operacao de audio multicanal.
 
+## Galeria
+
+### Dispositivos
+
+![Tela de dispositivos](imagens/devices.png)
+
+### Matriz
+
+![Matriz de roteamento](imagens/mixer.png)
+
+### Entradas
+
+![Controle de entradas](imagens/inputs.png)
+
+### Saidas
+
+![Controle de saidas](imagens/outputs.png)
+
+### Saidas com tema vermelho
+
+![Controle de saidas com tema vermelho](imagens/outputs-red.png)
+
+### Sistema
+
+![Configuracoes do sistema](imagens/system.png)
+
 ## Recursos principais
 
 - Controle completo via interface grafica.
