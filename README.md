@@ -1,8 +1,8 @@
 # AC680PRO DSP Controller
 
-O **AC680PRO DSP Controller** e um sistema de controle para processadores de audio digitais baseados em **ESP32-CYD** integrado ao **ADAU1452**, com interface moderna em desktop/web, comunicacao Wi-Fi ou serial, controle em tempo real de parametros DSP e visualizacao de niveis de audio.
+O **AC680PRO DSP Controller** é um sistema de controle para processadores de áudio digitais baseados em **ESP32-CYD** integrado ao **ADAU1452**, com interface moderna em desktop/web, comunicação Wi-Fi ou serial, controle em tempo real de parâmetros DSP e visualização de níveis de áudio.
 
-O projeto combina firmware ESP-IDF, export SigmaStudio e frontend React/Electron em uma solucao unica para controle, calibracao e operacao de audio multicanal.
+O projeto combina firmware ESP-IDF, export SigmaStudio e frontend React/Electron em uma solução única para controle, calibração e operação de áudio multicanal.
 
 ## Galeria
 
@@ -18,134 +18,134 @@ O projeto combina firmware ESP-IDF, export SigmaStudio e frontend React/Electron
 
 ![Controle de entradas](imagens/inputs.png)
 
-### Saidas
+### Saídas
 
-![Controle de saidas](imagens/outputs.png)
+![Controle de saídas](imagens/outputs.png)
 
-### Saidas com tema vermelho
+### Saídas com tema vermelho
 
-![Controle de saidas com tema vermelho](imagens/outputs-red.png)
+![Controle de saídas com tema vermelho](imagens/outputs-red.png)
 
 ### Sistema
 
-![Configuracoes do sistema](imagens/system.png)
+![Configurações do sistema](imagens/system.png)
 
 ## Recursos principais
 
-- Controle completo via interface grafica.
-- Comunicacao com o DSP por **Wi-Fi/WebSocket** ou **Serial**.
-- Matriz de roteamento **6 entradas x 8 saidas**.
-- Controle de ganho individual de entradas e saidas com ajuste fracionario.
-- Mute e inversao de fase.
-- EQ grafico/parametrico de entrada com ate **31 bandas**.
-- EQ de saida com **7 bandas**.
-- Crossover por canal de saida.
-- Limiter por canal de saida com indicacao visual de atuacao.
-- Delay de saida em canais suportados.
-- VUs digitais em LED e VUs analogicos calibrados.
-- Supervisor visual com widgets, conexoes e monitoramento.
-- Presets de audio e layout.
-- Salvamento/carregamento de configuracao.
-- Interface desktop empacotavel em `.exe`.
+- Controle completo via interface gráfica.
+- Comunicação com o DSP por **Wi-Fi/WebSocket** ou **Serial**.
+- Matriz de roteamento **6 entradas x 8 saídas**.
+- Controle de ganho individual de entradas e saídas com ajuste fracionário.
+- Mute e inversão de fase.
+- EQ gráfico/paramétrico de entrada com até **31 bandas**.
+- EQ de saída com **7 bandas**.
+- Crossover por canal de saída.
+- Limiter por canal de saída com indicação visual de atuação.
+- Delay de saída em canais suportados.
+- VUs digitais em LED e VUs analógicos calibrados.
+- Supervisor visual com widgets, conexões e monitoramento.
+- Presets de áudio e layout.
+- Salvamento/carregamento de configuração.
+- Interface desktop empacotável em `.exe`.
 - Temas visuais e suporte a idioma PT/EN.
 - Assistente de IA integrado por API key.
 
-## Controle de audio
+## Controle de áudio
 
 O sistema permite controlar os principais blocos de processamento do ADAU1452 diretamente pela interface:
 
 - Volume master.
 - Ganho de entrada.
-- Ganho de saida.
+- Ganho de saída.
 - Mute por canal.
-- Inversao de fase.
+- Inversão de fase.
 - Matriz de roteamento.
 - Ganhos individuais dos crosspoints da matriz.
 - EQ de entrada.
-- EQ de saida.
+- EQ de saída.
 - Crossover HP/LP.
 - Limiter.
-- Delay de saida.
+- Delay de saída.
 
-Os comandos sao enviados diretamente ao firmware, que atualiza os parametros do ADAU1452 usando os enderecos exportados pelo SigmaStudio.
+Os comandos são enviados diretamente ao firmware, que atualiza os parâmetros do ADAU1452 usando os endereços exportados pelo SigmaStudio.
 
 ## Matriz 6x8
 
-A matriz permite rotear ate **6 entradas** para **8 saidas**, com controle individual de:
+A matriz permite rotear até **6 entradas** para **8 saídas**, com controle individual de:
 
 - Ativo/inativo por ponto de matriz.
 - Ganho por crosspoint.
-- Visualizacao clara de entradas e saidas.
-- Sincronizacao com o firmware.
+- Visualização clara de entradas e saídas.
+- Sincronização com o firmware.
 
-Esse recurso permite configuracoes flexiveis de roteamento para sistemas estereo, multivias, subwoofers, zonas independentes ou setups personalizados.
+Esse recurso permite configurações flexíveis de roteamento para sistemas estéreo, multivias, subwoofers, zonas independentes ou setups personalizados.
 
 ## Equalizadores
 
 ### Entradas
 
-Cada entrada suportada possui EQ de ate **31 bandas**, com controle de:
+Cada entrada suportada possui EQ de até **31 bandas**, com controle de:
 
-- Frequencia.
+- Frequência.
 - Ganho.
 - Q.
 - Tipo de filtro.
 - Bypass.
 - Presets tonais.
 
-### Saidas
+### Saídas
 
-As saidas suportadas possuem EQ dedicado de **7 bandas**, permitindo ajustes finos por via ou por zona.
+As saídas suportadas possuem EQ dedicado de **7 bandas**, permitindo ajustes finos por via ou por zona.
 
 ## Crossover
 
-Os canais de saida suportados possuem crossover com controles de:
+Os canais de saída suportados possuem crossover com controles de:
 
 - High-pass.
 - Low-pass.
-- Frequencia.
+- Frequência.
 - Tipo de filtro.
-- Inclinacao.
-- Bypass/ativacao.
+- Inclinação.
+- Bypass/ativação.
 
-Esse recurso permite uso em sistemas multivias, separacao de subwoofer, alinhamento de faixas e protecao de alto-falantes.
+Esse recurso permite uso em sistemas multivias, separação de subwoofer, alinhamento de faixas e proteção de alto-falantes.
 
 ## Limiter
 
-O sistema possui controle de limiter nos canais de saida suportados, com ajuste de:
+O sistema possui controle de limiter nos canais de saída suportados, com ajuste de:
 
 - Threshold.
 - RMS TC.
 - Decay/Release.
 
-Alem do controle, o firmware le os readbacks de atuacao do limiter exportados pelo SigmaStudio. A interface mostra a indicacao visual quando o limiter esta atuando.
+Além do controle, o firmware lê os readbacks de atuação do limiter exportados pelo SigmaStudio. A interface mostra a indicação visual quando o limiter está atuando.
 
 A leitura do limiter utiliza o mesmo fluxo dos VUs, sem polling separado.
 
-## Delay de saida
+## Delay de saída
 
-Os canais de saida suportados possuem delay ajustavel, util para alinhamento temporal entre:
+Os canais de saída suportados possuem delay ajustável, útil para alinhamento temporal entre:
 
 - Subwoofer e vias principais.
 - Drivers em sistemas multivias.
 - Caixas fisicamente desalinhadas.
 - Pontos de escuta diferentes.
 
-O delay e aplicado no ADAU1452 em amostras, convertido a partir do valor em milissegundos na interface.
+O delay é aplicado no ADAU1452 em amostras, convertido a partir do valor em milissegundos na interface.
 
-## VUs e calibracao
+## VUs e calibração
 
-O sistema possui VUs digitais em LED e VUs analogicos.
+O sistema possui VUs digitais em LED e VUs analógicos.
 
-A leitura dos VUs vem dos blocos RTA/RMS do SigmaStudio, enviada pelo firmware ao frontend com valor percentual e tambem em **dB x10**, permitindo maior precisao visual.
+A leitura dos VUs vem dos blocos RTA/RMS do SigmaStudio, enviada pelo firmware ao frontend com valor percentual e também em **dB x10**, permitindo maior precisão visual.
 
-A calibracao segue a relacao:
+A calibração segue a relação:
 
 ```text
 VU = RTA_dB + 18
 ```
 
-Referencia usada:
+Referência usada:
 
 ```text
 RTA -38 dB -> -20 VU
@@ -155,7 +155,7 @@ RTA -18 dB ->   0 VU
 RTA -15 dB ->  +3 VU
 ```
 
-Os VUs analogicos usam imagem dedicada de alta qualidade e interpolacao para melhor leitura visual.
+Os VUs analógicos usam imagem dedicada de alta qualidade e interpolação para melhor leitura visual.
 
 ## Supervisor visual
 
@@ -168,34 +168,34 @@ O modo Supervisor permite criar uma tela operacional personalizada com:
 - Audio player.
 - Bargraph.
 - Display de 7 segmentos.
-- Pontos de conexao.
+- Pontos de conexão.
 - Links visuais.
 - Snap/grid.
-- Edicao de layout.
-- Exportacao/importacao de layout.
+- Edição de layout.
+- Exportação/importação de layout.
 
-Esse modo permite montar uma visao grafica do sistema de audio, util para operacao, demonstracao e monitoramento.
+Esse modo permite montar uma visão gráfica do sistema de áudio, útil para operação, demonstração e monitoramento.
 
-## Presets e persistencia
+## Presets e persistência
 
 O sistema possui suporte a:
 
 - Salvamento local de presets.
-- Carregamento automatico de layout.
-- Exportacao/importacao de layout `.json`.
-- Salvamento de parametros no dispositivo.
-- Aplicacao automatica de preset ao conectar.
+- Carregamento automático de layout.
+- Exportação/importação de layout `.json`.
+- Salvamento de parâmetros no dispositivo.
+- Aplicação automática de preset ao conectar.
 
-O layout validado pode ser empacotado junto com o aplicativo Electron para iniciar a aplicacao com uma configuracao padrao.
+O layout validado pode ser empacotado junto com o aplicativo Electron para iniciar a aplicação com uma configuração padrão.
 
-## Comunicacao
+## Comunicação
 
-O sistema suporta dois modos principais de comunicacao:
+O sistema suporta dois modos principais de comunicação:
 
 - **CYD Wi-Fi / WebSocket**
 - **Serial / Web Serial / Electron Serial**
 
-O modo Wi-Fi permite uso sem cabo USB apos o dispositivo estar na rede correta. O modo Serial permite configuracao direta, gravacao e testes locais.
+O modo Wi-Fi permite uso sem cabo USB após o dispositivo estar na rede correta. O modo Serial permite configuração direta, gravação e testes locais.
 
 ## Aplicativo desktop
 
@@ -204,11 +204,11 @@ O frontend pode ser empacotado como aplicativo Windows usando Electron.
 Recursos do aplicativo:
 
 - Janela sem moldura customizada.
-- Botoes de minimizar, maximizar/restaurar e fechar.
-- Icone proprio do AC680PRO.
-- Build release normal, sem limitacao trial.
-- Layout padrao incluido no pacote.
-- Saida em instalador `.exe`.
+- Botões de minimizar, maximizar/restaurar e fechar.
+- Ícone próprio do AC680PRO.
+- Build release normal, sem limitação trial.
+- Layout padrão incluído no pacote.
+- Saída em instalador `.exe`.
 
 Comando de build:
 
@@ -219,33 +219,33 @@ npm run electron:build
 
 ## Interface
 
-A interface foi construida para uso tecnico e operacional, com foco em:
+A interface foi construída para uso técnico e operacional, com foco em:
 
-- Densidade de informacao.
+- Densidade de informação.
 - Controles diretos.
-- Leitura rapida.
+- Leitura rápida.
 - Temas visuais.
 - Idiomas PT/EN.
-- Operacao em desktop.
+- Operação em desktop.
 - Compatibilidade com uso em campo.
 
 ## Assistente de IA
 
-O sistema possui area para configuracao de API key e uso de assistente de IA integrado. Esse recurso pode ser usado para apoio, diagnostico, explicacoes e auxilio operacional, dependendo do provedor configurado.
+O sistema possui área para configuração de API key e uso de assistente de IA integrado. Esse recurso pode ser usado para apoio, diagnóstico, explicações e auxílio operacional, dependendo do provedor configurado.
 
 ## Estado atual
 
-Ate este ponto, o sistema ja integra:
+Até este ponto, o sistema já integra:
 
 - Firmware ESP32-CYD.
 - DSP ADAU1452.
 - Export SigmaStudio atualizado.
 - Frontend React.
 - Aplicativo Electron.
-- Comunicacao Wi-Fi/Serial.
+- Comunicação Wi-Fi/Serial.
 - Matriz, EQs, crossover, limiter, delay e VUs.
 - Readback de limiter.
-- Calibracao documentada de VUs.
+- Calibração documentada de VUs.
 - Release desktop normal.
 
-A proxima evolucao planejada e a funcao experimental de **canais vinculados**, onde comandos aplicados a um canal poderao ser replicados automaticamente para outros canais selecionados, inicialmente apenas no frontend.
+A próxima evolução planejada é a função experimental de **canais vinculados**, onde comandos aplicados a um canal poderão ser replicados automaticamente para outros canais selecionados, inicialmente apenas no frontend.
