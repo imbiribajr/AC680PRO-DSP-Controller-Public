@@ -30,6 +30,10 @@ O projeto combina firmware ESP-IDF, export SigmaStudio e frontend React/Electron
 
 ![Configurações do sistema](imagens/system.png)
 
+## Vídeo
+
+[Demonstração do AC680PRO DSP Controller](videos/Video%201%20-%20AC680PRO.mp4)
+
 ## Recursos principais
 
 - Controle completo via interface gráfica.
